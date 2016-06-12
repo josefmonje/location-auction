@@ -1,0 +1,41 @@
+<div id="header">
+	<div class="container">
+
+		<!-- Logo -->
+		<div id="logo">
+			<h1><a href="{% url 'home' %}">AuctionRise</a></h1>
+		</div>
+
+		<!-- Nav -->
+		<nav id="nav">
+			<ul>
+				<li class="active">
+					<a href="{% url 'home' %}">Home</a>
+				</li>
+				<li>
+					<a href="{% url 'search' %}">Search</a>
+				</li>
+				<li>
+					<span>Market Watch</span>
+					<ul>
+						<li>
+							<a href="{% url 'rentalyields' %}">Rental Yields</a>
+						</li>
+						<li>
+							<a href="{% url 'capitalgains' %}">Capital Gains</a>
+						</li>
+						<li>
+							<a href="{% url 'totalgains' %}">Total Returns</a>
+						</li>
+					</ul>
+				</li>
+
+				<li>
+					<a href="{% url 'contact' %}">Contact</a>
+				</li>
+
+			</ul>
+		</nav>
+
+	</div>
+</div>

@@ -1,0 +1,375 @@
+/*
+	Layered by Pixelarity
+	pixelarity.com @pixelarity
+	License: pixelarity.com/license
+*/
+
+/*********************************************************************************/
+/* Basic                                                                         */
+/*********************************************************************************/
+
+	body,input,textarea,select
+	{
+		line-height: 1.75em;
+		font-size: 11pt;
+		letter-spacing: 0;
+	}
+
+	body
+	{
+		padding-top: 44px;
+	}
+
+	h2, h3, h4, h5, h6
+	{
+		font-size: 1.5em;
+		text-align: center;
+	}
+
+	section,
+	article
+	{
+		clear: both;
+		margin: 2em 0 2em 0 !important;
+	}
+
+	section > :first-child,
+	article > :first-child
+	{
+		margin-top: 0 !important;
+	}
+
+	section:first-child,
+	article:first-child
+	{
+		margin-top: 0 !important;
+	}
+
+	header
+	{
+		text-align: center;
+	}
+	
+	p
+	{
+		text-align: justify;
+	}
+
+	form .button
+	{
+		margin-top: 0.50em;
+	}
+	
+	.button
+	{
+		display: block;
+		margin: 0.5em auto 0.5em auto !important;
+		padding: 0.5em 0 0.5em 0 !important;
+		text-align: center;
+		line-height: 2.5em;
+		max-width: 320px;
+		border-radius: 5px;
+	}
+
+	/* Lists */
+
+		ul.style2
+		{
+			text-align: center;
+		}
+
+		ul.info
+		{
+			text-align: center;
+		}
+
+			ul.info p
+			{
+				text-align: center;
+			}
+
+		ul.social
+		{
+		}
+		
+			ul.social li
+			{
+				padding: 0em 0.10em;
+			}
+
+				ul.social li a:before
+				{
+					width: 30px;
+					height: 30px;
+					line-height: 30px;
+				}
+
+		ul.style3
+		{
+		}
+
+			ul.style3 .date
+			{
+				padding-top: 7px;
+			}
+
+/*********************************************************************************/
+/* UI                                                                            */
+/*********************************************************************************/
+
+	#navButton
+	{
+	}
+
+		#navButton .toggle
+		{
+			position: absolute;
+			left: 0;
+			top: 0;
+			width: 100%;
+			height: 100%;
+		}
+		
+			#navButton .toggle:before
+			{
+				content: '';
+				display: block;
+				width: 80px;
+				height: 30px;
+				position: absolute;
+				left: 50%;
+				margin-left: -40px;
+				background: url('images/toggle.svg') center center no-repeat rgba(57,59,70,0.75);
+				border-top: 0;
+				border-radius: 0 0 0.35em 0.35em;
+			}
+
+	#navPanel
+	{
+		position: relative;
+		background: #2d2f38;
+		box-shadow: inset 0px -2px 5px 0px rgba(0,0,0,0.25);
+		font-size: 1em;
+		font-weight: 400;
+	}
+
+		#navPanel:before
+		{
+			content: '';
+			display: block;
+			position: absolute;
+			left: 0;
+			top: 0;
+			width: 100%;
+			height: 100%;
+		}
+
+		#navPanel .link
+		{
+			position: relative;
+			z-index: 1;
+			display: block;
+			text-decoration: none;
+			padding: 0.75em 1em 0.75em 1em;
+			color: rgba(255,255,255,0.5);
+			border: 0;
+			border-top: dotted 1px rgba(255,255,255,0.05);
+		}
+		
+			#navPanel .link:first-child
+			{
+				border-top: 0;
+			}
+		
+			#navPanel .link.depth-0
+			{
+				color: #fff;
+				font-weight: 400;
+			}
+
+			#navPanel .indent-1 { display: inline-block; width: 1em; }
+			#navPanel .indent-2 { display: inline-block; width: 2em; }
+			#navPanel .indent-3 { display: inline-block; width: 3em; }
+			#navPanel .indent-4 { display: inline-block; width: 4em; }
+			#navPanel .indent-5 { display: inline-block; width: 5em; }
+			#navPanel .depth-0 { color: #fff; }
+			
+/*********************************************************************************/
+/* Header                                                                        */
+/*********************************************************************************/
+
+	#header
+	{
+	}
+	
+		#header .container
+		{
+			padding: 0.50em 0em 1em 0em;
+		}
+
+	#logo
+	{
+	}
+	
+		#logo h1
+		{
+			margin: 0;
+		}
+	
+		#logo a
+		{
+			position: static !important;
+			font-size: 1.7em !important;
+			font-weight: 700 !important;
+			text-align: center;
+		}
+	
+	#nav
+	{
+		display: none;
+	}
+	
+	
+/*********************************************************************************/
+/* Banner                                                                        */
+/*********************************************************************************/
+
+	#banner
+	{
+		padding-top: 0 !important;
+	}
+	
+	#banner header
+	{
+		padding: 3em 1.5em 1em 1.5em;
+	}
+	
+	#banner header h2
+	{
+		font-size: 1.3em;
+	}
+
+	#banner header .byline
+	{
+		font-size: 1em;
+	}
+
+/*********************************************************************************/
+/* Main                                                                          */
+/*********************************************************************************/
+
+	#main
+	{
+	}
+	
+	#main .container
+	{
+		padding: 2em 15px 0.5em 15px;
+	}
+
+/*********************************************************************************/
+/* Content                                                                       */
+/*********************************************************************************/
+
+	#content
+	{
+	}
+		
+		#content header
+		{
+			margin-bottom: 2em;
+		}
+	
+		#content header h2
+		{
+			font-size: 1.5em;
+		}
+		
+		#content header .byline
+		{
+			font-size: 1.2em;
+		}
+
+		#content h3
+		{
+			padding: 2em 0em 1.5em 0em;
+			font-size: 1em;
+		}
+
+
+/*********************************************************************************/
+/* Featured                                                                      */
+/*********************************************************************************/
+	
+	#featured
+	{
+	}
+	
+	#featured .container
+	{
+		padding: 4em 2em 2em 2em;
+	}
+	
+	#featured h3
+	{
+		padding-bottom: 1em;
+		font-size: 1em;
+	}
+
+	#featured p
+	{
+		text-align: center;
+	}
+
+/*********************************************************************************/
+/* Footer                                                                        */
+/*********************************************************************************/
+	
+	#footer
+	{
+		padding: 2em 0em 4em 0em;
+	}
+	
+	#footer .icon
+	{
+		font-size: 0.80em;
+	}
+	
+	#footer span
+	{
+		font-size: 1em;
+	}
+
+/*********************************************************************************/
+/* Wrapper                                                                       */
+/*********************************************************************************/
+
+	.wrapper .container
+	{
+		padding: 2em 15px 0.5em 15px;
+		text-align: center;
+	}
+	
+	.wrapper header h2
+	{
+		font-size: 1.3em;
+	}
+
+	.wrapper header .byline
+	{
+		font-size: 1.1em;
+	}
+	
+	.wrapper .image.left,
+	.wrapper .image.right
+	{
+		float: none !important;
+		margin: 0;
+		display: block;
+		width: 100%;
+	}
+	
+	.wrapper p
+	{
+		text-align: center;
+	}

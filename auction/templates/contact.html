@@ -1,0 +1,83 @@
+{% extends 'base.html' %}
+
+{% load static %}
+
+{% block head%}
+
+{% endblock head %}
+
+{% block body %}
+<!-- Main -->
+<div id="main">
+	<div class="container">
+
+		<div class="row">
+
+			<!-- Content -->
+			<div id="content" class="8u">
+				<section class="12u">
+
+					<header>
+						<h2>Contact</h2>
+					</header>
+
+					<form method="post" action="#">
+						<div class="row 50%">
+							<div class="6u">
+								<input type="text" name="name" id="name" placeholder="Name" />
+							</div>
+							<div class="6u">
+								<input type="text" name="email" id="email" placeholder="Email" />
+							</div>
+						</div>
+						<div class="row 50%">
+							<div class="12u">
+								<textarea name="message" id="message" placeholder="Message"></textarea>
+							</div>
+						</div>
+						<div class="row 50%">
+							<div class="12u">
+								<a href="#" class="button">Send Message</a>
+								<a href="#" class="button alt">Clear Form</a>
+							</div>
+						</div>
+					</form>
+				</section>
+
+			</div>
+
+			<!-- Sidebar -->
+			<div id="sidebar" class="4u">
+				<section>
+					<ul class="info">
+						<li>
+							<h3>Address</h3>
+							<p>
+								Untitled Incorporated
+								<br />
+								1234 Somewhere Road Suite #5432
+								<br />
+								Nashville, TN 00000-0000
+							</p>
+						</li>
+						<li>
+							<h3>Mail</h3>
+							<p>
+								<a href="#">someone@untitled.tld</a>
+							</p>
+						</li>
+						<li>
+							<h3>Phone</h3>
+							<p>
+								(800) 000-0000
+							</p>
+						</li>
+					</ul>
+				</section>
+			</div>
+
+		</div>
+
+	</div>
+</div>
+{% endblock body %}

@@ -1,0 +1,25 @@
+{% load static %}
+
+{% block content %}
+<!-- Page body -->
+<div ng-controller="mapCtrl" ng-cloak>
+	<div style="text-align:center;">
+		<span class="label">.</span>
+	</div>
+	<div class="map_window">
+	<ui-gmap-google-map center='map.center' zoom='map.zoom'>
+		<ui-gmap-markers models="list" coords="'coordinates'" icon="'icon'"
+		idKey="'id'" fit="true" events="detailEvents">
+			<ui-gmap-windows show="'show'">
+				<div class="info_window" ng-non-bindable>
+					<address>[[address]]</address>
+					Date sold: [[date|date]]<br/>
+					Price paid: [[paid_price|currency:'&pound;']]
+				</div>
+			</ui-gmap-windows>
+		</ui-gmap-markers>
+	</ui-gmap-google-map>
+	</div>
+
+</div>
+{% endblock %}

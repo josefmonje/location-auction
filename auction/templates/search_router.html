@@ -1,0 +1,24 @@
+{% extends 'template.html' %}
+{% load static %}
+
+{% block title %}Search Property Auctions{% endblock %}
+
+{% block head %}
+{% endblock%}
+
+{% block app %}ng-app="app"{% endblock %}
+
+{% block content %}
+<div ng-view></div>
+{% endblock %}
+
+{% block js %}
+<!-- JavaScript -->
+<script type="text/javascript" src="//maps.googleapis.com/maps/api/js?sensor=false&libraries=places"></script>
+<script src="{% static 'auction/js/lodash/lodash.min.js' %}"></script>
+<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/angular.js/1.3.3/angular.js"></script>
+<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/angular.js/1.3.3/angular-route.js"></script>
+<script src="{% static 'auction/js/angular-google-maps/angular-google-maps.min.js' %}"></script>
+<script src="{% static 'auction/js/routes.js' %}"></script>
+<script src="{% static 'auction/js/app.js' %}"></script>
+{% endblock js %}

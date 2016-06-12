@@ -1,0 +1,123 @@
+{% extends 'template.html' %}
+{% load static %}
+
+{% block title %}Search Property Auctions{% endblock %}
+
+{% block content %}
+<!-- Banner -->
+<div id="banner" ng-controller="mapCtrl">
+	<div class="container">
+		<section>
+			<div class="image full" style="background: url('{% static 'auction/images/main.jpg' %}') top center no-repeat fixed;background-size:inherit;text-align:center;height:300px;width:100%;padding-top:10%;}">
+				<input type="text" id="location" style="width: 250px" googleplace autofocus />
+				<a id="search" class="button button-primary" href="">Search</a>
+			</div>
+			<header>
+				<h2>The Online Auction Property Portal</h2>
+				<span class="byline">Sem nristiue onec tuis dui at dolor tempor intlorem ipsum laoreet</span>
+			</header>
+		</section>
+	</div>
+</div>
+
+<!-- Featured -->
+<div id="featured">
+	<div class="container">
+		<div class="row">
+			<div class="4u">
+				<section>
+					<span class="pennant icon fa-user"></span>
+					<h3>Auctor Feugiat</h3>
+					<p>Lorem ipsum dolor sit amet, consecetuer adipiscing elit. Phasellus hendrerit. Pellensque aliquet nibh.</p>
+					<a href="#" class="button">More</a>
+				</section>
+			</div>
+			<div class="4u">
+				<section>
+					<span class="pennant icon fa-cog"></span>
+					<h3>Sed Malesuada</h3>
+					<p>Lorem ipsum dolor sit amet, consecetuer adipiscing elit. Phasellus hendrerit. Pellensque aliquet nibh.</p>
+					<a href="#" class="button">More</a>
+				</section>
+			</div>
+			<div class="4u">
+				<section>
+					<span class="pennant icon fa-volume-off"></span>
+					<h3>Elit Phasellus</h3>
+					<p>Lorem ipsum dolor sit amet, consecetuer adipiscing elit. Phasellus hendrerit. Pellensque aliquet nibh.</p>
+					<a href="#" class="button">More</a>
+				</section>
+			</div>
+		</div>
+	</div>
+</div>
+
+<!-- Item1 -->
+<div class="wrapper wrapper-style1">
+	<div class="container">
+		<section>
+			<img src="{% static 'auction/images/pic02.jpg' %}" alt="" class="image right">
+			<header>
+				<h2>Nibh feugiat blandit</h2>
+				<span class="byline">Rutrum sed lorem ipsum dolor sit amet nullam</span>
+			</header>
+			<p>Accumsan diam rutrum porta justo tincidunt cum aliquam. Consectetur malesuada iaculis scelerisque pellentesque commodo suscipit iaculis magna cras sapien eget praesent. Libero etiam etiam fringilla felis dignissim nullam ligula dolor rutrum eget.</p>
+		</section>
+	</div>
+</div>
+
+
+
+<!-- Main -->
+<div id="main">
+	<div class="container">
+
+		<div class="row">
+
+			<!-- Content -->
+				<div id="content" class="8u">
+					<section>
+						<header>
+							<h2>Upcoming Auctions</h2>
+						</header>
+						<ul class="style3">
+							<li class="first">
+								<p class="date"><a href="#">Mar<b>24</b></a></p>
+								<h3>Savills</h3>
+								<p><a href="#">Lorem ipsum dolor sit amet, consecetuer adipiscing elit phasellus hendrerit.</a></p>
+							</li>
+							<li>
+								<p class="date"><a href="#">Aug<b>24</b></a></p>
+								<h3>Allsop Residential</h3>
+								<p><a href="#">Lorem ipsum dolor sit amet, consecetuer adipiscing elit phasellus hendrerit.</a></p>
+							</li>
+							<li>
+								<p class="date"><a href="#">Aug<b>24</b></a></p>
+								<h3>McHugh</h3>
+								<p><a href="#">Lorem ipsum dolor sit amet, consecetuer adipiscing elit phasellus hendrerit.</a></p>
+							</li>
+						</ul>
+					</section>
+				</div>
+
+			<!-- Sidebar -->
+				<div id="sidebar" class="4u">
+					<section>
+						<header>
+							<h2>Magna tempus etiam</h2>
+						</header>
+						<img src="{% static 'auction/images/pic04.jpg' %}" alt="" class="image featured">
+						<p>Lorem ipsum dolor sit amet, consecetuer adipiscing elit. Phasellus hendrerit. Lorem ipsum dolor sit amet, consecetuer adipiscing elit.</p>
+					</section>
+				</div>
+
+		</div>
+
+	</div>
+</div>
+{% endblock %}
+
+{% block js %}
+<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?sensor=false&libraries=places"></script>
+<script type="text/javascript" src="{% static 'auction/js/search.js' %}"></script>
+{% endblock js %}

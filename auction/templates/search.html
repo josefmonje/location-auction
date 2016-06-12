@@ -1,0 +1,205 @@
+{% load static %}
+
+{% block content %}
+<!-- Page body -->
+<div ng-controller="mapCtrl" ng-cloak>
+    <div>
+	<form style="text-align: center;">
+	<span class="label">Search within </span><input ng-model="radius" ng-change="input=''" value="3" type="number" style="width: 2.5em;" placeholder="3"><span class="label"> miles of </span><input ng-model="input" type="text" placeholder="Choose location" style="width: 12em;" googleplace autofocus />
+	<hr />
+	<input class="button" type="button" ng-click="switch()" value="Switch to [[listview?'Map':'List']] View"/>
+	<select ng-model="minprice" id="minPrice" name="minPrice" style="width: 7em">
+		<option value selected="selected">Min Price</option>
+		<option value="50000">50,000</option>
+		<option value="60000">60,000</option>
+		<option value="70000">70,000</option>
+		<option value="80000">80,000</option>
+		<option value="90000">90,000</option>
+		<option value="100000">100,000</option>
+		<option value="110000">110,000</option>
+		<option value="120000">120,000</option>
+		<option value="125000">125,000</option>
+		<option value="130000">130,000</option>
+		<option value="140000">140,000</option>
+		<option value="150000">150,000</option>
+		<option value="160000">160,000</option>
+		<option value="170000">170,000</option>
+		<option value="175000">175,000</option>
+		<option value="180000">180,000</option>
+		<option value="190000">190,000</option>
+		<option value="200000">200,000</option>
+		<option value="210000">210,000</option>
+		<option value="220000">220,000</option>
+		<option value="230000">230,000</option>
+		<option value="240000">240,000</option>
+		<option value="250000">250,000</option>
+		<option value="260000">260,000</option>
+		<option value="270000">270,000</option>
+		<option value="280000">280,000</option>
+		<option value="290000">290,000</option>
+		<option value="300000">300,000</option>
+		<option value="325000">325,000</option>
+		<option value="350000">350,000</option>
+		<option value="375000">375,000</option>
+		<option value="400000">400,000</option>
+		<option value="425000">425,000</option>
+		<option value="450000">450,000</option>
+		<option value="475000">475,000</option>
+		<option value="500000">500,000</option>
+		<option value="550000">550,000</option>
+		<option value="600000">600,000</option>
+		<option value="650000">650,000</option>
+		<option value="700000">700,000</option>
+		<option value="800000">800,000</option>
+		<option value="900000">900,000</option>
+		<option value="1000000">1,000,000</option>
+		<option value="1250000">1,250,000</option>
+		<option value="1500000">1,500,000</option>
+		<option value="1750000">1,750,000</option>
+		<option value="2000000">2,000,000</option>
+		<option value="2500000">2,500,000</option>
+		<option value="3000000">3,000,000</option>
+		<option value="4000000">4,000,000</option>
+		<option value="5000000">5,000,000</option>
+		<option value="7500000">7,500,000</option>
+		<option value="10000000">10,000,000</option>
+		<option value="15000000">15,000,000</option>
+		<option value="20000000">20,000,000</option>
+	</select>
+	<select ng-model="maxprice" id="maxPrice" name="maxPrice" style="width: 7em">
+		<option value selected="selected">Max Price</option>
+		<option value="50000">50,000</option>
+		<option value="60000">60,000</option>
+		<option value="70000">70,000</option>
+		<option value="80000" >80,000</option>
+		<option value="90000">90,000</option>
+		<option value="100000">100,000</option>
+		<option value="110000">110,000</option>
+		<option value="120000">120,000</option>
+		<option value="125000">125,000</option>
+		<option value="130000">130,000</option>
+		<option value="140000">140,000</option>
+		<option value="150000">150,000</option>
+		<option value="160000">160,000</option>
+		<option value="170000">170,000</option>
+		<option value="175000">175,000</option>
+		<option value="180000">180,000</option>
+		<option value="190000">190,000</option>
+		<option value="200000">200,000</option>
+		<option value="210000">210,000</option>
+		<option value="220000">220,000</option>
+		<option value="230000">230,000</option>
+		<option value="240000">240,000</option>
+		<option value="250000">250,000</option>
+		<option value="260000">260,000</option>
+		<option value="270000">270,000</option>
+		<option value="280000">280,000</option>
+		<option value="290000">290,000</option>
+		<option value="300000">300,000</option>
+		<option value="325000">325,000</option>
+		<option value="350000">350,000</option>
+		<option value="375000">375,000</option>
+		<option value="400000">400,000</option>
+		<option value="425000">425,000</option>
+		<option value="450000">450,000</option>
+		<option value="475000">475,000</option>
+		<option value="500000">500,000</option>
+		<option value="550000">550,000</option>
+		<option value="600000">600,000</option>
+		<option value="650000">650,000</option>
+		<option value="700000">700,000</option>
+		<option value="800000">800,000</option>
+		<option value="900000">900,000</option>
+		<option value="1000000">1,000,000</option>
+		<option value="1250000">1,250,000</option>
+		<option value="1500000">1,500,000</option>
+		<option value="1750000">1,750,000</option>
+		<option value="2000000">2,000,000</option>
+		<option value="2500000">2,500,000</option>
+		<option value="3000000">3,000,000</option>
+		<option value="4000000">4,000,000</option>
+		<option value="5000000">5,000,000</option>
+		<option value="7500000">7,500,000</option>
+		<option value="10000000">10,000,000</option>
+		<option value="15000000">1,000,000</option>
+		<option value="20000000">20,000,000</option>
+	</select>
+	<select ng-model="auctioneer" name='country_select' id='SelectAuctioneer' style="width: 14em">
+		<option value="" selected="selected">Select an auctioneer</option>
+		{% for auctioneer in auctioneers %}
+			<option value="{{ auctioneer }}">{{auctioneer}}</option>
+		{% endfor %}
+	</select>
+<!--	<select ng-model="vendor" name='vendor_select' id='Selectvendor'>
+		<option value="" selected="selected">Select a vendor</option>
+			{% for vendor in vendors %}
+		<option value="{{ vendor }}">{{vendor}}</option>
+		{% endfor %}
+	</select> -->
+	<input class="button" type="button" value="Filter" ng-click="filterList()">
+    </div>
+
+	</form>
+	<div style="text-align:center;">
+		<p class="label">Found [[list.length]] propert[[list.length===1?'y':'ies']]</p>
+	</div>
+	<div>
+		<div class="list_window" ng-show="listview">
+			<div ng-repeat="item in list" class="list_column">
+				<div class="list_item">
+				<a href="../detail/[[item.id]]/#/[[item.qs]]">
+					<img class="property_img" ng-src="[[item.image_src]]" />
+				</a>
+				[[item.id]]<br/>
+				Address: [[item.address]]<br/>
+				Price: [[item.price|currency:'&pound;']]<br/>
+				Description: [[item.description]]<br/>
+				Lease Details: [[item.lease_details]]<br/>
+				Auctioneer: [[item.auctioneer]] Lot [[item.lot]]<br/>
+				Auction Date: [[item.auction_date|date]]<br/>
+				View: [[item.viewing_time]]
+				</div>
+			</div>
+		</div>
+
+		<div class="map_window" ng-hide="listview">
+		<ui-gmap-google-map center='map.center' zoom='map.zoom' events="mapEvents">
+			<ui-gmap-markers models="list" coords="'coordinates'"
+			idKey="'$$hashKey'" fit="true" events="markersEvents">
+				<ui-gmap-windows show="'show'">
+					<div class="info_window" ng-non-bindable>
+						<a href="../detail/[[id]]/#/[[qs]]">
+							<img class="property_img" src="[[image_src]]"/>
+						</a>
+						[[id]]
+						<address>[[address]]</address>
+						[[price|currency:'&pound;']]
+						<br>
+						[[description]]
+						[[lease_details]]
+						<br>
+						[[auctioneer]] [[lot]]
+						[[auction_date|date]]
+						<br>
+						View: [[viewing_time]]
+					</div>
+				</ui-gmap-windows>
+			</ui-gmap-markers>
+		</ui-gmap-google-map>
+		</div>
+
+	</div>
+	</div>
+</div>
+{% endblock %}
+
+{% block js %}
+<!-- JavaScript -->
+<script type="text/javascript" src="//maps.googleapis.com/maps/api/js?sensor=false&libraries=places"></script>
+<script src="{% static 'auction/js/lodash/lodash.min.js' %}"></script>
+<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/angular.js/1.3.3/angular.js"></script>
+<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/angular.js/1.3.3/angular-route.js"></script>
+<script src="{% static 'auction/js/angular-google-maps/angular-google-maps.min.js' %}"></script>
+<script src="{% static 'auction/js/routes.js' %}"></script>
+<script src="{% static 'auction/js/app.js' %}"></script>
+{% endblock js %}
